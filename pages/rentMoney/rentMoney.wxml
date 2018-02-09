@@ -1,0 +1,11 @@
+<view class='rent-title'>车位绑定</view>
+<view class='box'>
+  <view class='rent-box' wx:for-items="{{rentItem}}" wx:key="{{index}}">
+    <view id="{{index}}"  data-data="{{rentItem[index]}}" class="rent-item {{activeIndex == index ? 'rent-current' : ''}}" bindtap='rentClick'>
+      <view>{{item.month_desc}}(￥{{item.month_fee}})</view>
+    </view>
+  </view>
+</view>
+
+<view class='rent-btn' bindtap='rentPay'>立即绑定</view>
+<view class='rent-info'>点击立即绑定，即表示你已经同意<text class='rent-info-a'>《绑定协议》</text></view>

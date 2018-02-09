@@ -1,0 +1,68 @@
+<view class="appoint-bg {{parkShow?'show':'hidden'}}">
+  <view class='appoint-address'>
+    <image class='appoint-ico' src='../../img/position_icon@2x.png'></image>
+    <text class='appoint-address-text'>广东省珠海市金唐西路2号</text>
+  </view>
+  <view class='clearfix'>
+    <view class='appoint-info'>
+      <view class='appoint-text'>{{plateNo}}</view>
+      <view class='appoint-title'>车牌号</view>
+    </view>
+    <view class='appoint-info'>
+      <view class='appoint-text'>{{countDownMinute}}:{{countDownSecond}}</view>
+      <view class='appoint-title'>保留时间</view>
+    </view>
+  </view>
+  <view class='clearfix apponit-btn'>
+    <view class='cancel-appoint' bindtap='cancelAppoint'>取消预约</view>
+    <view class='stop-car' bindtap='stopCar'>开锁停车</view>
+  </view>
+  <view class='navigation-img' bindtap='navigationImg'>车位导航</view>
+</view>
+<view class="{{navigationImgShow?'show':'hidden'}}" style='position: fixed; top: 0; left:0; z-index:99; text-align: center;width:100%;'>
+  <image src='{{navigationImg}}'  animation="{{animationData}}" style="width:100%;"></image>
+  <image bindtap='navigationImgFalse' style='width:40px; height:40px;margin-top:50px;' src='../../img/navigationImgFalse.png'></image>
+</view>
+
+<view class="{{navigationImgShow?'show':'hidden'}}" style="position: fixed; top:0; left:0; z-index:98; background: rgba(0,0,0,0.5);width:100%;height:100%; margin:0 auto;"></view>
+
+
+<!-- <map id="map" longitude="102.6569366455" latitude="25.0821785206" scale="14" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location class="map">  -->
+
+<map id="map" longitude="{{oLng}}" latitude="{{oLat}}" scale="14" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindcallouttap="callouttap" show-location  class="map {{navigationImgShow?'hidden':'show'}}">  
+  <!-- <cover-view class='parking-p' bindtap="parkingP">style="width: 100%;height:{{winHeight}}px"
+    <cover-image src="{{carImg}}"></cover-image>
+    <cover-view>智慧车位</cover-view>
+  </cover-view>   -->
+  <cover-image class="refresh_ico {{parkShow?'hidden':'show'}}" bindtap="refreshtap" src="../../img/refresh_ico.png"></cover-image>
+  <cover-image class="center_ico {{parkShow?'hidden':'show'}}" bindtap="moveToLocation" src="../../img/center_ico.png"></cover-image>
+  <cover-image class="help_ico {{parkShow?'hidden':'show'}}" bindtap="helpTocenter" src="../../img/help_ico.png"></cover-image>
+  <cover-image class="personal_ico {{parkShow?'hidden':'show'}}" bindtap="personalTocenter" src="../../img/personal_ico.png"></cover-image>
+   <cover-view class="sweep-btn {{parkShow?'hidden':'show'}}" bindtap="sweepCar">扫码开锁</cover-view> 
+</map>
+
+<view class="parking-list-container {{parkShow?'hidden':'show'}}">
+  <view class="parking-list-section center" wx:for="{{searchSongList}}" wx:key="lcokParking" data-data="{{item}}" data-index="{{item.parking_weiyi_no}}" bindtap="bindParkingListItemTap">
+    <view class="content">
+      <view class="parking-list-item flex">
+        <view class="parking-name">{{item.parking_name}}</view>
+      </view>
+      <view class="parking-list-item flex">
+        <view class="u-1of2 plain-text">距您:
+          <view class="parking-distance">{{item.distance}}</view>
+        </view>
+        <view class="plain-text">可预约车位:
+          <view class="left-number">{{item.type2Count}}</view>
+        </view>
+      </view>
+    </view>
+    <image class="arrow-right" src="../../img/arrow_icon@2x.png"></image>
+    <!--<view class="menu-button">预约</view>-->
+  </view>
+  <view class='img-box' hidden="{{!imgParking}}">
+    <image src='../../img/Recharge-record_icon@2x.png'></image>
+    <text>暂无停车场哦</text>
+  </view>
+</view>
+
+<view class="menu-annotation {{parkShow?'hidden':'show'}}" bindtap='moreBtn'>查看更多</view>

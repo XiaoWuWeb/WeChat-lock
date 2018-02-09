@@ -1,0 +1,27 @@
+<view class='header clearfix'>
+  <image class='user_img' src="{{userInfo.avatarUrl}}"></image>
+  <view class='user_info'>
+    <view class='user_name'>{{userInfo.nickName}}</view>
+    <view class="user_no" bindtap='userNo'>车牌号： <span class="{{user_no==1 ? 'on' : ''}}">{{userNo}}</span></view>
+  </view>
+  <!-- <image class='arrow' src='../../img/arrow_icon@2x.png'></image> -->
+</view>
+<view class="cont">
+
+  <!-- <view class='parking_box clearfix' bindtap='parkingList'>
+    <view class='flt person-title'>停车记录</view>
+    <image class='arrow1' src='../../img/arrow_icon@2x.png'></image>
+    <view class='frt info'>{{parkNum}}次</view>
+  </view>
+
+  <view class='refunds_box clearfix' bindtap='refundList'>
+    <view class='flt person-title'>退款记录</view>
+    <image class='arrow1' src='../../img/arrow_icon@2x.png'></image>
+  </view> -->
+
+  <view class='space_box clearfix' bindtap='spaceBox'>
+    <view class='flt person-title'>我的车位</view>
+    <image class='arrow1' src='../../img/arrow_icon@2x.png'></image>
+  </view> 
+
+</view>

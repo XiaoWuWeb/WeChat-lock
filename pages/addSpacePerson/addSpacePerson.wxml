@@ -1,0 +1,9 @@
+<view class='wrap'>
+  <view class='info-box'>
+    <view class='address'>{{parkingName}}</view>
+    <view class='time clearfix'>成员昵称：<input maxlength='8' class='time_input' bindinput="nameInput"/></view>
+    <view class='money clearfix border-none'>手机号码：<input maxlength='11' class='time_input' type="number" bindinput="timeInput"/></view>
+  </view>
+</view>
+
+<view class='footer clearfix' bindtap='payMoney'>立即绑定</view>

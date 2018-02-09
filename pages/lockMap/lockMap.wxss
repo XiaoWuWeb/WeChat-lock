@@ -1,0 +1,207 @@
+.bottom-bar {
+  background-color: white;
+}
+
+.map{
+  position: relative;
+  width:100%;
+  height:80%;
+  margin: 0 auto;
+}
+.parking-list-container{
+  margin-bottom: 15rpx;
+}
+.parking-list-section{
+    background-color: white;
+    /*padding: 20rpx;*/
+    /*margin: 20rpx 0;*/
+    display: flex;
+    /*border-bottom: 1rpx solid gainsboro;*/
+    border-radius: 15rpx;
+    margin:10rpx 15rpx;
+}
+
+.parking-list-section:last-child{
+    
+    border-bottom: none;
+}
+
+.parking-list-item{
+    margin: 15rpx;
+}
+
+.plain-text{
+    font-size: 14px;
+    color: #666;
+}
+
+.parking-name{
+    max-width: 300px;
+    font-size: 16px;
+    color:#222;
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    white-space: nowrap;  
+    line-height: 36rpx; 
+}
+
+.left-number{
+    display: inline-block;
+    color: #32b51c;
+    font-size: 16px;
+}
+
+.parking-distance{
+    display: inline-block;
+    font-size: 14px;
+    color: #32b51c;
+}
+
+.content{
+    justify-content: space-between;
+    padding:10rpx;
+    flex: 1
+}
+
+.nearby-parkingLot{
+  padding: 10rpx;
+}
+
+.menu-annotation{
+  text-align: center;
+  margin: 20px 0;
+  padding-bottom: 30px;
+}
+.arrow-right{
+  width: 11px;
+  height: 17px;
+}
+
+/*切换停车与锁  */
+
+.parking-p{
+  position: absolute;
+  top: 35px; 
+  right: 14px;
+  width: 80px;
+  height: 80px;
+  font-size: 12px;
+  color: rgb(48,48,48);
+  text-align: center;
+  background-color: rgb(255,255,255);
+}
+.parking-p cover-image{
+  width: 56px;
+  height: 61px;
+  margin: 0 auto;
+}
+
+.sweep-btn{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  z-index: 99;
+  margin-left: -90px;
+  width: 180px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 44px;
+  text-align: center;
+  color: #222;
+  background-color: rgb(255,222,0);
+  border-radius: 8px;
+}
+
+.appoint-bg{
+  position: relative;
+  background-color: #fff;
+  z-index: 98;
+}
+.appoint-info{
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.appoint-title{
+  font-size: 12px;
+  color: #606060;
+}
+.appoint-text{
+  font-size: 18px;
+  color: rgb(32,32,32);
+  font-weight: 600;
+}
+.apponit-btn{
+  padding: 0 33px;
+  margin: 26px 0;
+}
+.cancel-appoint{
+  width: 138px;
+  height: 33px;
+  border: 1px #606060 solid;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #606060;
+  text-align: center;
+  line-height: 35px;
+  float: left;
+}
+.stop-car{
+  width: 140px;
+  height: 35px;
+  background-color: rgb(255,222,0);
+  border-radius: 4px;
+  font-size: 18px;
+  color: #222;
+  text-align: center;
+  line-height: 35px;
+  float: right;
+}
+.navigation-img{
+  position: absolute;
+  top: 2px;
+  right: 20px;
+  font-size: 14px;
+  color: #32b51c;
+}
+.appoint-address{
+  padding-left: 20px; 
+  margin-bottom: 20px;
+}
+.appoint-ico{
+  width: 12px;
+  height: 14px;
+  vertical-align: middle;
+}
+.appoint-address-text{
+  font-size: 12px;
+  color: #222;
+}
+.refresh_ico,.center_ico,.help_ico,.personal_ico{
+  width: 49px;
+  height: 49px;
+}
+
+.refresh_ico{
+  position: absolute;
+  left: 14px;
+  bottom: 61px;
+}
+
+.center_ico{
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+}
+
+.help_ico{
+  position: absolute;
+  right: 14px;
+  bottom: 61px;
+}
+
+.personal_ico{
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+}

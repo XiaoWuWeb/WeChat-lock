@@ -1,0 +1,39 @@
+<view class="rent-title {{addBox ? 'show' : 'hidden'}}">车位成员</view>
+<!-- <view class='box'>
+  <view class='rent-box' wx:for-items="{{rentItem}}" wx:key="{{index}}">
+    <view id="{{index}}" class="rent-item {{activeIndex == index ? 'rent-current' : ''}}">
+      <view>{{item}}</view>
+    </view>
+  </view>
+</view> -->
+
+<view class="item-box">  
+  <view class="items">  
+    <view wx:for="{{list}}"  wx:key="{{index}}"  class="item">  
+      <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner txt">{{item.nickname}}</view>  
+      <view data-index="{{index}}" data-data="{{item}}" bindtap = "delItem" class="inner del">删除</view>  
+    </view>  
+  </view>  
+</view>
+
+<view class="{{addBox ? 'hidden' : 'show1'}}">
+  <!-- <view class="{{upNav?'show1':'hidden'}}" style='text-align: center;'>
+    <image class='lock-img' src="{{lockUpImg}}" bindtap='lockUp'></image>
+    <text class='lock-info'>{{lockUpInfo}}</text>
+  </view> -->
+
+  <!-- <view class="{{downNav?'show1':'hidden'}}" style='text-align: center;'>
+    <image class='lock-img' src="{{lockDownImg}}" bindtap='lockDown'></image>
+    <text class='lock-info'>{{lockDownInfo}}</text>
+  </view> -->
+  <view style='text-align: center;'>
+    <image class='lock-img' src="{{lockDownImg}}" bindtap='lockDown'></image>
+    <text class='lock-info'>{{lockDownInfo}}</text>
+  </view>
+</view>
+
+
+<view class="add-box {{addBox ? 'show' : 'hidden'}}">
+  <view class='add-person' bindtap='addPerson'>添加成员</view>
+  <view class='stop-car' bindtap='lockDown'>立即停车</view>
+</view>
